@@ -1,0 +1,157 @@
+\documentclass{beamer}
+
+\usepackage{tikz-dependency}
+\usepackage[T1]{fontenc}
+\usepackage{expex}
+
+\usetheme{Boadilla}
+
+\newcommand{\furl}[1]{\footnote{\url{#1}}}
+
+\depstyle{deperror}{edge style=red}
+
+\title{Modelagem de câncer via Edos}
+
+\author[Carlos ]{
+    Carlos Souza~\inst{1} \\ \and Janaina Neres \and Victor Bitaraes ~\inst{1}
+}
+
+\institute[EMAp] {
+  \inst{1}%
+  Escola de Matemática Aplicada da FGV (FGV/EMAp), Brasil
+}
+
+\date{Agosto 2022}
+
+\begin{document}
+
+\begin{frame}
+\maketitle
+\end{frame}
+
+
+
+\begin{frame}{Resumo}
+\begin{itemize}
+    \item O que é um câncer ?
+    \item Como ele evolui ?
+    \item Tratamento ?
+\end{itemize}
+\end{frame}
+
+\begin{frame}{O que é um câncer ?}
+
+\begin{figure}[!h]
+\centering
+\caption{Formação de um tumor}
+\includegraphics[scale=0.4]{Figuras/fig01.png}\\
+{\fontsize{10pt}{10pt} Fonte: Página do Instituto Nacional do Câncer (INCA, 2020).}
+\end{figure}
+
+Um câncer é um conjunto de doenças em que células danificadas começam a crescer de formar desordenado de  que invadem tecidos e orgãos  gerando uma massa chamada de tumor, essa massa por se  desvia o tráfego de sangue para poder ser nutrir, como consequência  corrobora as funções vitais do corpo humanod , podendo levá-lo a morte.
+ 
+\end{frame}
+
+\begin{frame}{Como ele evolui ?}
+
+Seu comportamente é semelhante ao de crescimento populacional, Uma vez que é possível estudar populações de celula ,moléculas , micro-organismos assim como sociedas.Com o Auxílo da matemática é  possível modelar esse crescimento por meio de Equações diferencias , e como tratá-los.Para isso vamos abordar os modelos:
+\textbf{Malthus},
+\textbf{Logístico}e
+\textbf{Gompertz}:
+\end{frame}
+
+\begin{frame}{modelos:}
+ \begin{itemize}
+     \item Malthus:
+     \begin{equation}
+\begin{cases}
+  \frac{dP}{dt} =k.P(t)\\
+   P(0)=P_0  
+\end{cases}
+\end{equation}
+com solução $P(t)=P_0e^{kt}$
+onde k- é uma constante que indica o crescimento da função
+
+\item Logístico:
+       \begin{equation}
+\begin{cases}
+  \frac{dP(t)}{dt} =r.P(1-\frac{P}{P\infty})\\
+   P(0)=P_0  
+\end{cases}
+\end{equation}
+onde r- é a taxa de crescimento e $P\infty$ é a população limite
+\end{itemize}
+\end{frame}
+
+     \begin{frame}
+     \begin{itemize}
+         \item Gompertz:
+      \begin{equation}
+\begin{cases}
+  \frac{dP(t)}{dt} =a.P-rPln(P)\\
+   P(0)=P_0 , a>0, r>0  
+\end{cases}
+\end{equation}    
+          \end{itemize}
+onde $a=r Ln(P\infty)$
+\\
+
+
+\end{frame}
+
+
+\begin{frame}{Tratamento via Quimioterapia}
+
+Para combater a evolução do câncer , foram elaborados alguns modelos que corresponde a inserção de drogas  e medicamentos , afim de diminiur o limite máximo da polução, até mesmo a possibilidade cura total . \\
+\end{frame}
+
+
+\begin{frame}{Tratamento via Quimioterapia}
+\begin{itemize}
+    \item Modelo para drogas ciclo-inesperado-Sachs
+\end{itemize}
+\begin{equation}
+\begin{cases}
+  \frac{dN}{dt} =-rN[ln(\frac{N}{k})]-\gamma c(t)N\\
+  c(t)N=c_0Ste^{-rt}  \\
+  \end{cases}     
+\end{equation}
+S=1 , considera tratamento\\
+  S=0 ,desconsidera o tratamento \\
+  c(t): é a concentração do medicamento no organismo no instante t:
+\end{frame}
+
+\begin{frame}
+\begin{itemize}
+    \item Kohandel :  
+\end{itemize}
+     \begin{equation}
+\begin{cases}
+  \frac{dN}{dt} =-rN[ln(\frac{N}{k})]- c(t)N-w_sI_{t=ts}N\\
+  c(t)N=c_0Ste^{-rt}  \\
+  \end{cases} 
+\end{equation} 
+com:
+  \begin{equation}
+  I_{t=ts}=     
+  \begin{cases}
+   1, t=t_s\\
+   0, t\neq t_s \\
+  \end{cases} 
+\end{equation} 
+\end{frame}  
+ 
+  
+
+  
+
+\begin{frame}{Considerações}
+
+    Nesse artigo, estudaremos a modelagem matemática do câncer juntamente com alguns de seus tratamentos, propondo um modelo matemático de crescimento tumoral com a interação das populações de células cancerosas, imunológicas e normais, os modelos Logisticos e de Gompertz são os mais indicados,pois inlcuem fafor limitante.
+    Por outro lado, ação da quimioterapia e da dieta cetogênica, atuando como tratamentos principal e adjuvante (não farmacológico), respectivamente.
+
+A partir da ação dos tratamentos estudados, temos como principal objetivo otimiza--los, de modo que seja possível reduzir ou eliminar a quantidade de células tumorais e minimizar os possíveis efeitos colaterais provenientes dos tratamentos.     
+\end{frame}
+
+
+\end{document}
