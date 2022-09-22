@@ -99,14 +99,16 @@
 % Informações de dados para CAPA e FOLHA DE ROSTO
 % ---
 
+%logo da fgv
 \begin{figure}
     \centering
     \includegraphics{Figuras/download.png}
     \label{fig:my_label}
 \end{figure}
+
 \titulo{Análise de Modelos Matemáticos de Tumores de Câncer}
 \tituloestrangeiro{Analysis of Mathematical Models of Cancer Tumors}
-\autor{Carlos Souza\thanks{DADOS DO AUTOR}
+\autor{Carlos Souza\thanks{Carlos Souza}
 }
 \local{Brasil}
 \data{}
@@ -186,29 +188,38 @@
 % página de titulo
 \maketitle
 
+\newpage
 % resumo em português
 \begin{resumoumacoluna}
-Neste trabalho, %%%%%%%%%%%%%%%%%%%5
+ %%%%%%%%%%%%%%%%%%%5
+ 
+O câncer é um conjunto de doenças causadas pelo crescimento de células danificadas de formar desordenado , que por sua vez invadem tecidos e orgãos  gerando uma massa chamada de tumor. Por sua vez, ela atua desviando o tráfego de sangue para poder se nutrir, como consequência  prejudica as funções vitais do corpo humano , podendo levá-lo a morte.\\
+O crescimento celular pode ser facilmente enquadrado ao de dinâmica  de crescimento populacional. Com o Auxílo da matemática é  possível criar modelos matemáticos por meio de Equações diferencias,
+que descrevem esse crescimento , sua reação perante ao tratamento de drogas e outros tratamentos ,até mesmo levando a possibildiade de cirurgias .
+\\
+Nesse trabalho, estudaremos o modelo de\textbf{Gompertz} ,tanto para o crescimento quando para o tratamento do câncer. Mas antes abordaremos outros modelos matemáticos , desde o mais simples como o de \textbf{Malthus}, como os outros modelos foram surgindo a partir dele ,até chegarmos aos modelos mais recentes, afim de comprender melhor essa dinâmica ,e quais aspectos são relevantes na hora de avaliar e tomar resultados 
 
  \vspace{\onelineskip}
 
  \noindent
- \textbf{Palavras-chave}: 
+ \textbf{Palavras-chave}: EDOs,Models , Câncer
+ 
 \end{resumoumacoluna}
 % resumo em inglês
 \renewcommand{\resumoname}{Abstract}
 \begin{resumoumacoluna}
  \begin{otherlanguage*}{english}
+ The Cancer is a number of diseases caused by the growth of damaged cells which invade tissues and organs generating a mass called tumor. This kind of tumor acts by diverting blood traffic in order to be nourished, as a consequence, it harms the vital functions of the human body and it can even lead to death.
+Cell growth can easily be within the population growth dynamics. With the help of mathematics it is possible to create mathematical models through differential equations that describe this growth, their reaction to drug and other treatments, even leading to the possibility of surgery.
 
-
-
+In this essay, we will study the Gompertz model for both growth and cancer treatment. But beforet that, we will approach other mathematical models, from the simplest ones, such as \textbf{Malthus}, as the other models emerged from it, until we reach the most recent models in order to better understand this dynamic and identify which aspects are relevant to evaluate and take results
 
 
 
    \vspace{\onelineskip}
 
    \noindent
-   \textbf{Keywords}: 
+   \textbf{Keywords}: EDOs,Models , Câncer
  \end{otherlanguage*}
 \end{resumoumacoluna}
 
@@ -230,19 +241,23 @@ Neste trabalho, %%%%%%%%%%%%%%%%%%%5
 
 % ----------------------------------------------------------
 % 2. Cap. Metodologia
-\input{2.Metodologia}
+\newpage
+\input{2.Aspectos_Biológicos.tex}
 
 % ----------------------------------------------------------
 % 3. Cap. Aspectos Biológicos
-\input{3.Aspectos_Biológicos}
+\newpage
+\input{3.Metodologia.tex}
 
 % ----------------------------------------------------------
 % 4. Cap. Considerações Finais
-%\input{4.ConsideraçõsFinais}
+\newpage
+\input{4.ConsideraçõsFinais}
 
 % ----------------------------------------------------------
-% 4. Cap. Referências
+% 5. Cap. Referências
 %\input{5.Referências}
-
+\newpage
+\input{5.Referências.tex}
 
 \end{document} 
