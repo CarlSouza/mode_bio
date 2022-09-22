@@ -1,9 +1,362 @@
 \section{Metodologia}
 
-Este artigo pontua passos de um estudo teórico, se caracterizando como uma revisão da literatura, no intuito de aprofundar, investigar, analisar e sintetizar pesquisas
-acerca do Estudo - ensino de Equações Diferenciais na Educação Superior, especificamente na Licenciatura em Matemática, conectando temas como Modelagem Matemática na 
-perspectiva da Educação Matemática e da Matemática Aplicada, as Tecnologias da Informação e Comunicação, e a aplicação desenvolvida sobre dinâmica do crescimento 
-populacional de tumores.
+Este artigo pontua passos de um estudo teórico, se caracterizando como uma revisão da literatura, no intuito de aprofundar, investigar, analisar e sintetizar pesquisas acerca do Estudo - ensino de Equações Diferenciais na Educação Superior, especificamente na Licenciatura em Matemática, conectando temas como Modelagem Matemática na perspectiva da Educação Matemática e da Matemática Aplicada, as Tecnologias da Informação e Comunicação, e a aplicação desenvolvida sobre dinâmica do crescimento populacional de tumores.
 
-Objetiva-se, que a partir dessa discussão possa-se trazer e apresentar possíveis possibilidades de ensino para a aprendizagem de EDO, por meio de uma abordagem 
-diferenciada dos modelos matemáticos aqui apresentados como, apenas, algumas aplicações dentre várias outras que também podem ser exploradas.
+Quanto ao método, será utilizada a pesquisa do tipo bibliográfico. ``A pesquisa bibliográfica é desenvolvida com base em material já elaborado, constituído principalmente de livros e artigos científicos.'' (GIL, 2019, p. 44). Serão acessados a base de dados da Biblioteca Brasileira de Teses e Dissertações em busca de trabalhos já produzidos sobre a temática a fim de que seja elaborado um plano de estudos sobre o assunto.
+
+Objetiva-se, que a partir dessa discussão possa-se trazer e apresentar possíveis possibilidades de ensino para a aprendizagem de EDO, por meio de uma abordagem diferenciada dos modelos matemáticos aqui apresentados como, apenas, algumas aplicações dentre várias outras que também podem ser exploradas.
+
+\subsection{Modelos matemáticos para crescimento do câncer }
+
+
+
+O crescimento de um tumor  tem comportamento semelhante à dinâmica de crescimento populacional. Uma vez que é possível estudar populações da célula ,moléculas , micro-organismos assim como sociedades .Com o Auxílo da matemática é  possível modelar esse crescimento por meio de Equações diferencias , e como tratá-los.Nessa secção vamos aborta os modelos mais comuns de dinâmica de população e como eles foram adaptados de forma a conseguimors manipulá-los por meio de EDOS. Os modelos em destaque serão ; \textbf{Exponencial , Logísticos ,Gompertz e Bertalaffy , como mostrado na figura : }
+
+
+\begin{figure}[!h]
+\centering
+\caption{Formação de um tumor}
+\includegraphics[scale=0.6]{Figuras/cancer evolução.PNG}\\
+
+\end{figure}
+\newpage
+\subsubsection*{ Malthus: Exponencial}
+Proposto pelo economista inglês T.R Malthus .Foi o primeiro modelo de crescimento populacional. COntudo , bastante limitado , sem considerar fatores como fome ,probeza , guerras até doenças , Malthus tentou provar que a popula humana cresceria de forma geometrica enquanto a de alimentos e recursos de forma aritímetica, ou seja , a quantidade de recursos não seria o suficiente para sustentar toda a humanidade. O que não  aconteceu , pois Malthus também não considerou o fato do avanço tecnológico  e salto de produção.\\
+Este modelo avalia a variação da população em função do tempo 
+     \begin{equation}
+\begin{cases}
+  \frac{dP}{dt} =k.P(t)\\
+   P(0)=P_0  
+\end{cases}
+\end{equation}
+com solução $P(t)=P_0e^{kt}$
+
+Análise dimensional
+\begin{itemize}
+    \item $P(t)$ é a população no instante t;
+    \item $P(0)$ é a população no inicial
+    \item $K$ é uma constante de proporcionalidade adimensional 
+\end{itemize}
+
+Interessante observer que , para k>0, o crescimento será "positivo", ou seja , indica um aumento da populção. Contudo, uma vez que o tempo é muito grande $t \to\infty $ temos que $P(t) \to \infty$ , ou seja , terias um crescimento infinito da população, não possui fator limitante. Por outro lado , se k<0 teriamos um decamiento de certa população 
+\\
+ Este modelo , mesmo apresentando falhas possibilitou a criação de modelos mais sofiscados e e também pode ser aplicados à populações de bactérias e pragas, 
+
+\subsubsection*{ Modelo de Gompertz}
+
+Sao modelos que descrevem crescimento lentos no início do estudo e lentos no final. Com o objetivo de descrever o crescimento de tutomores sólidos .A primeira aplicação e crescimento tumoral a partir do modelo de Gompertz, desenvolvida por Beijamin Gompertz, no ano de 1938, desenvolveu uma equação muito famosa, pois mesmo como matemático, se interessou em realizar um estudo que até então naquela época era pesquisado apenas em áreas biológicas. Um 
+
+Consideramos o modelo de Gompertz de referências (BOYCE; DIPRIMA, 2002), porém levando em conta algumas modificações em relação à notação de parâmetros, que também é colocada segundo nossa referência de aplicação, Domingues (2011), dada pelo problema de valor inicial:
+
+   \begin{equation*}
+\begin{cases}
+  \frac{dN}{dt} =rNln(\frac{K}{N}) 
+   bP\\
+   N(0)=n_0  
+\end{cases}
+\end{equation*}
+
+Análise Dimensional
+\begin{itemize}
+    \item $N(t)$ é a população de células tumorais no instante t;
+    \item $t$ é o instante considerado para cada quantidade de população de células;
+    \item $r$ é a constante de crescimento intrínseca das células,(a velocidade com  que as células se multiplicam) com $r$> 0.
+
+    \item $K$ é o tamanho máximo que o tumor pode atingir com os nutrientes disponíveis((Sachs et al., 2001)
+) ou seja, nossa capacidade de suporte.com 
+
+\end{itemize}
+  Vamos determinar uma solução para o modelo usando alguns métodos para a resolução analítica de uma EDO. Dada à equação (\ref{eq01}), fazendo uma mudança de variável e seguindo usando a definição de logaritmo, tem-se:
+  
+\begin{equation*}
+u = \ln\left(\dfrac{N}{K}\right) \Rightarrow N = K\cdot e^u,
+\end{equation*}
+Derivando em relação a $t$, obtemos
+\begin{equation}
+\dfrac{dN}{dt} = K\cdot e^u\cdot \dfrac{du}{dt}, \label{eq02}
+\end{equation}
+igualando a equação (\ref{eq02}) com (\ref{eq01}):
+\begin{eqnarray*}
+% \nonumber to remove numbering (before each equation)
+K\cdot e^u\cdot \dfrac{du}{dt}   &=& -r\cdot u \cdot K \cdot e^u \\
+\dfrac{du}{dt}   &=& -r\cdot u.
+\end{eqnarray*}
+Separando as varáveis e integrando em ambos os lados, tem-se:
+\begin{eqnarray*}
+% \nonumber to remove numbering (before each equation)
+\int \dfrac{du}{u}   &=& - \int r\cdot dt\\
+\ln(u)   &=& -rt + C \\
+u   &=& e^{-rt + C} \\
+\ln\left(\dfrac{N}{K}\right)   &=& e^{-rt + C} \\
+N   &=& K\cdot e^{e^{-rt + C}} 
+
+\end{eqnarray*}
+E sendo $N(0) = N_0$, uma condição inicial, logo
+\begin{equation*}
+    N(t)=k(\frac{N_0}{k})^e^{-rt} 
+\end{equation*}
+que é solução para a EDO.
+\\
+Analise do modelo:
+\\
+Com o desenvolvimento da angiogênese , o valor da populção N(t) tende a  desse modo:
+
+\begin{equation*}
+   lim_{t \to \infty} N(t)=K 
+\end{equation*}
+
+Desse modo , podemos concluir que equação possui apenas um ponto crítico , que será seu máximo global. \\
+$N=K/e $
+\\
+Como consequência , seu valor máximo é obtido quando:
+
+$V_{max}=r.K/e$
+
+\subsubsection{ Modelo  Verhulst : Logístico}
+
+Surge o biólogo--matemático Pierre François Verhulst, um matemático belga que iniciou a equação de crescimento logístico onde a população deverá crescer até um limite máximo sustentável, ou seja, ela tende a se estabilizar num determinado valor. O modelo de Verhulst é, fundamentalmente, o modelo de Malthus modificado, considerando a variação de crescimento dependendo da própria população em cada instante e satisfazendo algumas propriedades (BASSANEZI, 2002).
+
+Em nossa referência conceitual, Bassanezi (2002), encontra--se o modelo de crescimento logístico, também denominado por Equação de Verhulst, dada por:
+\begin{equation*}
+\dfrac{dP}{dt} = P(a - bP),\hspace{2ex} \mbox{com}\hspace{1ex} k > 0,
+\end{equation*}
+onde $a$ e $b$ são constantes positivas, as quais complementam a equação do crescimento populacional exponencial proposto por Malthus que produz taxas infinitas de populações com o crescimento do tempo que pode vir a descrever bem inicialmente, mas, para tempos suficientemente grandes foge da realidade das populações reais.
+
+Abordaremos, Domingues (2011), usaremos o modelo de crescimento logístico, apresentado por Verhulst em 1838, contudo adaptado nos moldes de nossa aplicação, crescimento de tumores, que é dado pelos seguintes termos:
+\begin{equation*}
+\dfrac{dN}{dt} = r \left(1 - \dfrac{N}{K}\right) N,
+\end{equation*}
+
+Análise Dimensional :
+\begin{itemize}
+    \item $N(t)$ é a população no instante t
+    \item $r$ é a taxa intríseca de crescimento que é representa o crescimento sem nenhum fator limitante;
+    \item $K$ é a população limite , ou seja quando $k=P$ sua taxa de crescimento é nula
+\end{itemize}
+Cuja a solução da EDO  é :
+\begin{equation*}
+    N(t)=\frac{K}{1+(\frac{k}{N_0}-1)e^{rt}}
+\end{equation*}
+    
+Tomado uma observação assintótica temos que :
+$lim_{t\to \infty} N(t)=k$\\
+\\
+Ou seja, para um intervalo de tempo muito grande , a população atinge um valor máximo , se mantendo constante.\\
+outra obervação , se K for muito maior do que N , então o modelo esse modelo converge para o Modelo de Malthus.\\
+
+Como visto abaixo:\\
+
+Observe que se usássemos o modelo de crescimento de tumor pelo estudo de Malthus seria:
+\begin{equation*}
+\dfrac{dN}{dt} = r \cdot N.
+\end{equation*}
+O qual tem como solução, por separação de variáveis, e sendo a condição inicial $N(0)=N_0$, a função:
+\begin{equation*}
+N(t) = n_0\cdot e^{rt}.
+\end{equation*}
+
+
+
+
+\subsubsection{ Modelo Von Bertalantffy}
+
+proposto em 1957, tomou como base as leis quantidativas do metabolismo e crescimento do corpo de seres vivos. Se focando na base da lei da alometria , a taxa que esses processos podem ser expressos em função da massa do corpo,prope que a taxa de crescimento de um corpo deve se a diferença entre o processo de construção e destruição desse corpo , que por sua vez tende a um valor máximo constante. Podendo ser expresso por :
+
+\begin{equation*}
+    \frac{dP}{dt} =aP^{\alpha}-bP{\beta}
+\end{equation*}
+
+Analise Dimensional
+\begin{itemize}
+    \item $P(t)$ é a população
+    \item $a$ é a  constante de anamolismo ;
+    \item $b$ é a  constante de catabolismo , resposánveis pelo ganho e perda de massa di corpo;
+    \item $\alpha$ e $\beta$ representão "poder de peso"
+\end{itemize}
+Para seu desenvolvimento Bertallanffy considerou os fatores $\alpha = 2/3$ e $\beta=1$ . Com isso chegamos no seguinte problema de valor inicial :
+
+    \begin{equation*}
+\begin{cases}
+  \frac{dP}{dt} =aP^{2/3}- 
+   bP\\
+   P(0)=p_0  
+\end{cases}
+\end{equation*}
+com solução:
+
+\begin{equation*}
+    P(t)=\{1+[((\frac{P_0}{K}
+    -1)e^{\frac{bt}{3}}]\}^3
+\end{equation*}
+
+
+\subsubsection{ Modelo Generalizado }
+
+Embora, pareçaa fora do contexto , ele pode torna útil, pois, esse modelo compila os modelos de Gompertz e Logístico já visto antes. Dessa forma, como o nome sugere, podemos usar um modelo mais geral abrangente.\\  
+Proposto em 1959, tomou como base um modelo decrescimento empiríco de plantas de Richard. Elaborado partindo da função de logaritimo generalizada ,esse modelo pode ser escrito da seguinte formar:
+
+\begin{equation*}
+    \frac{dP}{dt} =rP
+    \frac{(1-\frac{P}{K})^q)}{q}
+\end{equation*}
+
+Analise Dimensional
+\begin{itemize}
+    \item $P(t)$ é a população
+    \item $K$ é a  capacidade máxima ;
+    \item $q$ é um parâmetro que relaciona a taxa metabólica e massa dos indivíduos com estruturas fractaisl das ramificações sanguíneas dos seres vivos (Geoffrey West H. Brown)
+\end{itemize}
+
+Interessante desse método é que quando $q = 1$ esse modelo tornasse o modelo Logístico e quando $q \to 0$ temos um modelo de Gompertz.
+
+\subsubsection{ Modelo Bassanezi }
+
+É um modelo melhorado do \textbf{Bertalantty} , apresenta uma forma generalizada para o crescimento de uma população ou formar de vida qualquer: 
+
+ \begin{equation*}
+\begin{cases}
+  \frac{dP}{dt} =\alpha P^{\gamma}- 
+   \beta P\\
+   P(0)=p_0  
+\end{cases}
+\end{equation*}
+
+Analise Dimensional
+
+\begin{itemize}
+    \item $P$ é a peso do animal
+    \item $\alpha$ e $\beta$ são constante de anabolismo e catabolismo 
+    \item $\gamma$ é um parâmetro que depende da taxa de poder do corpo do animal , que percente ao intervalo (0,1).
+\end{itemize}
+
+    \begin{equation}
+\begin{cases}
+  \frac{dP}{dt} =aP^{2/3}- 
+   bP\\
+   P(0)=p_0  
+\end{cases}
+\end{equation}
+com solução:
+
+\begin{equation*}
+    P(t)=\{1+[((\frac{P_0}{K}
+    -1)e^{\frac{bt}{3}}]\}^3
+\end{equation*}
+
+Dos modelos citados vamos optar desenvolver o Modelo de Gompertz , represtando da seguinte forma:
+
+     \begin{equation}
+\begin{cases}
+  \frac{dP}{dt} =k.P(t)\\
+   N(0)=n_0  
+\end{cases}
+\end{equation}
+com solução $P(t)=P_0e^{kt}$
+
+\newpage
+\subsection{Modelos matemáticos no Tratamento:Via Quimioterapia}
+
+\textbf{Uma breve apresentação:}
+\\
+A quimioterapia é um dos tratamentos anticâncer mais trabalhados. Ela relaciona um ou mais agentes quimioterápicos (fármacos) em uma administração padronizada para combater o câncer. Esses fármacos são carregados pela corrente sanguínea a todas as partes do corpo, eliminando as células cancerosas e impedindo-as, de se espalharem. Conforme o (INCA, 2020) ela pode ser administrada:
+\begin{itemize}
+    \item Via oral: São comprimidos, cápsulas e líquidos, que podem ser tomados em casa.
+    \item Intravenosa: A medicação é aplicada na veia ou por meio de cateter (tubo colocado na veia), na forma de injeções ou dentro do soro.
+    \item Intramuscular: A medicação é aplicada por meio de injeções no músculo.
+    \item Subcutânea: A medicação é aplicada por meio de injeção no tecido gorduroso acima do músculo.
+    \item Intratecal (pela espinha dorsal): É pouco comum, sendo aplicada no líquor (liquido da espinha), administrada pelo médico, em uma sala própria ou no centro cirúrgico.
+    \item Tópica (sobre a pele): O medicamento, que pode ser líquido ou pomada, é aplicado na pele.
+\end{itemize}
+
+\\
+  Nesse contexto e com base no que vimos em outros modelos que; um modelo de crescimento populacional pode considerar diversos fatores que influênciam a população a chegar no seu máximo .Para populçao celular levamos em conta o anabolismo e o catabolismo .\\
+ Contudo,para o tratamento do câncer , devemos levar em consideração a inserção de drogas, para e combater tais células, além também outras interveções como o cirurgias,se elas serão necessarias ou não. Nesse caso apresentaremos uma serie de modelos relacionas , explicando seu funcionamento , contudo , vamos focar no modelo de Gompertz :
+
+\subsubsection{Modelo para drogas ciclo-inesperado}
+ Com base no modelo de Gompertz, vamos inserir um fator  tratamento  com a finalidade de reduzir o crescimento das células cancerigênas
+ 
+\begin{equation}
+  \frac{dN}{dt}= -rN[ln(\frac{N}{k})]-\gamma c(t)N
+\end{equation}
+
+Análise Dimensional
+
+\begin{itemize}
+
+    \item N(t)- número de células cangerígenas
+    \item $\gamma$ grau de efeito do medicamento 
+    \item c(t)- concentração do medicamento no instante t
+\end{itemize}
+
+que por sua vez é determinada por:
+
+\begin{equation*}
+    c(t)N=c_0Ste^{-rt}  \\
+\end{equation*}
+onde S é definida como  função de degrau do seguinte tipo 
+\begin{itemize}
+
+    \item S=1- considerando o tratamento
+    \item S=0-não considerando o tratamento
+\end{itemize}
+
+\subsubsection{Modelo de Kohandel: \textit{log-kill}}
+
+Também com base no modelo de Gompertz ,esse modelo é caracterizado pela eliminação de células tumorais via proporção constante a cada infusão de um agente quimioterápeutico.Desse modo cada agente anticâncer mata um proporção e não uma quantidade fixa de células,a magnitude das células tumorais mortas é dada por um função logarítmica.\\
+\textbf{Por exemplo:} uma dose de 3log-kill é capaz de reduzir um população de $10^12$ para $10^9$ das células com tumor. Isso corresponde a $99,9\%$ .
+A infusão do agente quimioterápeutico se dá por meio de cirurgias, o processo de cirurgia consiste em eliminar um quantidade fixa de células , representados por $-w_s$ que por sua vez correspeonde  a uma porcentagem das células eliminadas.
+Como a taxa de crescimento também depende da concretação de drogas $c(t)$ e da cirurgia, seguindo o modelo de Gomperzt teremos:
+
+ 
+\begin{equation}
+
+  \frac{dN}{dt} =-rN[ln(\frac{N}{k})]- c(t)N-w_sI_{t=ts}N\\
+  
+\end{equation}
+
+Análise Dimensional
+
+seguindo os mesmo fatores do modelo anterior com  inclusão do fator $I_{t=ts}$:
+ \begin{equation*}
+\begin{cases} I_{t=ts}
+  1 , se t=ts\\
+  0 , se  t\neq ts 
+\end{cases}
+\end{equation*}
+onde $t_s$ é o instante em que a cirurgia acontece.
+Com isso , esse modelo tornasse um pouco mais delicado e completo que os outro , pois devemos avaliar os instantes que ocorreram as cirurgias e o tratamento.
+\\
+Uma observeção interessante é que;Caso a cirurgia e a quimioterapia não aconteçam,a solução para o problema de valor inicial será a mesma solução da equação de Gompertz.:
+
+\begin{equation*}
+N(t)=k(\frac{N_0}{k})^{e-rt} 
+\end{equation*}
+
+Como primeiro caso vamos avaliar ,durante o intervalo que a cirurgia não ocorreu ,mas a terapia foi realizada temos o seguinte:
+
+\begin{equation*}
+N(t)=ke^{e-rt(c_1(t)+ln\frac{N_0}{k})}
+\end{equation*}
+onde $c_1$ é dado por:
+
+\begin{equation*}
+ c_1(t)=-\int_{t_0}^{t}c(t)e^{-rt}dt
+\end{equation*}
+
+Segundo caso a ser avaliado é quando a  cirurgia  ocorre depois da quimioterapia no tempo $t=t_f$ .Com isso chegamos em :
+
+\begin{equation*}
+   N(t)=ke^{e-rt_f[(c_1(t)+ln\frac{N_0}{k})]-w_s}
+\end{equation*}
+
+Terceiro caso :Quando a cirurgia ocorre antes da quimioterapia
+ o número de células após cirurgia no instante $t_0$será dado por:
+
+ \begin{equation*}
+   N(t)=ke^{w_s}(\frac{N_0}{k})^{e-rt_0}
+\end{equation*}
+
+ Quando a cirurgia ocorre mas o tratamento ainda está ocorrendo, ou seja no intervalor$(t_0<t<t_f)$
+\begin{equation*}
+    N(t)=ke^{e-rt_f[(c_1(t)+ln\frac{N_0}{k})]-w_s^{rt_0}}   
+\end{equation*}
