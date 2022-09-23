@@ -1,15 +1,17 @@
-\section{Considerações Finais}
+\section{Considerações }
 
-Modelos matemáticos são muito úteis para representar fenômes biológicos e também descrever os mecânismo que ocorrem durante seu desenvolvimento
- Nesse parte do trabalho, estudamos problemas de crescimento e combate ao câncer. Analisamos modelos matemáticos já existente afim de interpretar melhor seu
- desenvolvimento, o Modelo exponencial de Malthus não 
- pode ser aplicado ao crescimento do cancer , uma vez que não possui fator limitante, contudo , foi muito importante para o desenvolvimento dos outros .\\ 
- Nos modelos Logísticos e de Gompertz chegamos a um realidade mais próxima das células ,mas ainda sim eles não são completos , uma vez que eles não incluem
- medidas de tratamento . Porém, a partir deles foi possível a criação dos modelos de droga ciclo-inesperada e Kohandel,para combater o crescimento do tumor.
- que além de incluir o fator de inserção de drogas , também inclui o fator de cirugia, que remove as células danificadas , em funçao do tempo de tratamento.\\
- Ao incorporar Equações Ordinárias nesses eventos , facilita sua modelagem e o compreensão, até mesmo de "manipular" ou prever resultados com maior segurança
+Modelos matemáticos são ferramentas muito úteis para representar fenômes biológicos e também descrever seus mecânismo que ocorrem durante seu desenvolvimento
+ Nesse parte do trabalho, estudamos problemas de crescimento e combate ao câncer. Analisamos modelos matemáticos já existente afim de interpretar melhor seu 
+ funcionamento. 
+ \\o Modelo exponencial de Malthus não pode ser aplicado ao crescimento de câncer , uma vez que não possui fator limitante, contudo , foi muito importante para
+ o desenvolvimento dos outros a frente .\\ 
+ Nos modelos Logísticos e de Gompertz chegamos a um realidade mais próxima das células ,mas ainda sim eles não são completos , uma vez que eles não incluem 
+ medidas de tratamento . Porém, a partir deles foi possível a criação dos modelos de droga ciclo-inesperada e Kohandel, para  combater o crescimento do tumor,
+ que além de incluir o fator de inserção de drogas , também inclui o fator de cirugia, que remove as células danificadas , em função do tempo de tratamento.\\
+ Ao incorporar Equações Ordinárias nesses eventos , facilita sua modelagem e o compreensão, até mesmo de "manipular" ou prever resultados com maior segurança 
  e precisão.
- Por fim ,essa primeira parte do trabalho proporcional o estudo e conhecimento de diversos modelos matemáticos para descrever dinâmica de população.Contudo a 
- parte de
- \textbf{Resultados e desenvovlvilemento } vamos deixar para a segunda parte, onde faremos as simulações e experimentos visando o Modelo de Gompertz, pois 
- apresenta um ser um modelo melhor "adaptavél " às situações.
+ Por fim ,essa primeira parte do trabalho proporcional o estudo e conhecimento de diversos modelos matemáticos para descrever dinâmica de população.Contudo 
+ a parte de
+ \textbf{Resultados e desenvolvimento } vamos deixar para a segunda parte, onde faremos as simulações e experimentos visulizando o Modelo de Gompertz, pois
+ aparenta ser um  modelo melhor "adaptavél " às situações.
+ 
