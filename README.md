@@ -10,4 +10,4 @@ e a aplicação desenvolvida sobre dinâmica do crescimento populacional de tumo
 Objetiva-se, que a partir dessa discussão possa-se trazer e apresentar possíveis possibilidades de ensino para a aprendizagem de EDOs, por meio de 
 uma abordagem diferenciada dos modelos matemáticos aqui apresentados como, apenas, algumas aplicações dentre várias outras que também podem ser exploradas.
 
-Co-autores: Carlos Souza, Janaina Neres e Victor Bitaraes
+Co-autores: Carlos Souza, Janaina Neres 
