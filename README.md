@@ -2,6 +2,7 @@
 
 ## Artigo: Análise de Modelos Matemáticos de Tumores de Câncer 
 
+
 Este artigo pontua passos de um estudo teórico, se caracterizando como uma revisão da literatura, no intuito de aprofundar, investigar, 
 analisar e sintetizar pesquisas acerca do Estudo - ensino de Equações Diferenciais na Educação Superior, especificamente na Licenciatura em Matemática,
 conectando  temas como Modelagem Matemática na perspectiva da Educação Matemática e da Matemática Aplicada, as Tecnologias da Informação e Comunicação, 
